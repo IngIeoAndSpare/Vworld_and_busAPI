@@ -1,0 +1,31 @@
+
+http://www.gbis.go.kr/gbis2014/publicService.action?cmd=mBusLocation
+버스위치 확인 매뉴얼
+
+http://blog.naver.com/tmtsw/120191897875
+공공 DB에서 api 활용 예시.
+
+서울시 버스 좌표계하고 상세한 설명
+http://blog.drunkhacker.me/?p=310
+
+2. 기반자료 얻는 순서.
+---- routeId, vehId 에 관한 Q&A 해보니 다음과 같은 답변을 얻었음. ----
+현재 서울특별시 기술문서 확인 시에 최신화 되어 있지 않아제공기관에 확인요청 중에 있으나 아직 최신화 하지 않은 것으로 확인이 됩니다.
+번거로우시겠지만 기술문서 대신 서울특별시에서 제공하는 사이트 (http://api.bus.go.kr) 를 통해 OPENAPI 명세를확인해주시길 바랍니다.
+지원팀에서 위 사이트 확인 시에 routeId 는 노선정보조회 서비스, vehId는 버스위치정보조회 서비스 에서 조회 가능한 것으로 확인되니API 활용에
+참고해주시길 바랍니다.
+감사합니다.
+
+------------
+
+http://api.bus.go.kr
+위의 사이트를 참고하여 개발하는 것이 빠름.
+
+노선번호를 이용해 버스 id를 가져와야한다. 다음 사이트를 참고
+http://api.bus.go.kr/contents/sub02/getBusRouteList.html
+
+노선버스 위치정보 목록조회 서비스를 이용하여 각 해당 버스번호를 가진 버스id를 얻어와야한다.
+(http://api.bus.go.kr/contents/sub02/getBusPosByRtid.html)
+
+여러대 버스정보 중 1가지를 택하여 실제 버스 버스위치를 가져와야 한다.
+http://api.bus.go.kr/contents/sub02/getBusPosByVehId.html
