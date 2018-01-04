@@ -1,0 +1,36 @@
+body {
+    font:14px/1.8 Arial, Helvetica, sans-serif;
+}
+.frame {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+.container{
+    overflow: scroll;
+}
+.nav{
+    float: left;
+    width: 17%;
+    height: 100%;
+    background: #aaa;
+    color: #fff;
+}
+.navList{
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+.busList{
+    width : 87%;
+    margin: 0;
+}
+.vmap{
+    float: right;
+    width: 83%;
+    height: 100%;
+}
+.nav, .vmap {
+    display: table-column;
+}

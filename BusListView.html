@@ -1,0 +1,42 @@
+<html>
+<div class="frame">
+
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="GetBusRouteList.js"></script>
+        <script src="vFun.js"></script>
+
+        <script type="text/javascript" src="http://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=안알랴줌"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav">
+                <ul class="navList">
+                    <label>버스 번호 검색</label>
+                    <br>
+                    <input type="text" id="busNumber">
+                    <input type="button" id="busInput" value="click">
+                    <br>
+                    <input type="checkbox" id="get30">30초마다 업데이트
+                    <br>
+                    <label>버스 목록</label>
+                    <input type="button" id="busPath" value="버스 노선 보기">
+                    <select class="busList" id="busSelect">
+                    </select>
+                </ul>
+            </div>
+            <div class="vmap" id="v_map">
+                <!--!notice 여기에 맵이 들어감 vFun.js-->
+
+             
+            </div>
+
+    </body>
+
+    </div>
+
+</html>
