@@ -90,20 +90,20 @@ function initMap() {
         busSelectorvalue = this.value;
         setTimeout("positionForMarker()", 300);
     });
-
+/*
     $('#get30').on('change', function () {
         let checkInterval_vFun = "";
         busSelectorvalue = $('#busSelect')[0].selectedOptions[0].value;
         if ($('#get30')[0].checked) {
             checkInterval_vFun = setInterval(function () {
                 setTimeout("positionForMarker()", 2000);
-            }, 30000);
+            }, 3000);
         }
         else {
             clearInterval(checkInterval_vFun);
         }
     });
-
+*/
     $('#busPath').on('click', function () {
         if (busRouteData.busRoutePosX == 0) {
             alert("이 노선은 노선정보(path)가 없습니다!");

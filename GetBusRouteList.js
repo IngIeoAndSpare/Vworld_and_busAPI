@@ -6,7 +6,7 @@ window.addEventListener('load', init);
  * @var {Object} busRouteData 버스 경로 정보(노선)
  * @const serviceKey 서비스키
  */
-const serviceKey = "안알랴줌";
+const serviceKey = "?ServiceKey={Your Service Key}";
 var busData;
 var busRouteData;
 
@@ -55,7 +55,7 @@ function init() {
                 checkInterval = setInterval(function () {
                     let url = "http://ws.bus.go.kr/api/rest/buspos/getBusPosByRtid";
                     numberChangeHandler(url, in_TextBox, 2);
-                }, 30000);
+                }, 10000);
             }
 
         }
@@ -183,7 +183,7 @@ function BusLocation(res) {
         busGpsY: bus_gpsY,
         busPlainNo: bus_plainNo
     };
-
+    positionForMarker();
 }
 
 /**
